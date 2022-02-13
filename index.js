@@ -22,7 +22,7 @@ document.getElementById('calcInput').addEventListener('click', function (event) 
 
     // calc input code section 
     const calcNumber = document.getElementById('calc-code');
-    
+
     if(isNaN(number)){
         if(number == "C"){
             calcNumber.value = '';
@@ -31,4 +31,20 @@ document.getElementById('calcInput').addEventListener('click', function (event) 
         calcNumber.value = calcNumber.value + number;
     }
 
+})
+
+//  submit seciton 
+
+document.getElementById('submit').addEventListener('click', function(){
+    const generateRandomCode = document.getElementById('generate-code').value;
+    const inputCodeByUser = document.getElementById('calc-code').value;
+    
+
+    if(generateRandomCode!='' && generateRandomCode == inputCodeByUser){
+        document.getElementById('notify-ok').style.display = 'block';
+        document.getElementById('notify-not-ok').style.display = 'none';
+    }else{
+        document.getElementById('notify-ok').style.display = 'none';
+        document.getElementById('notify-not-ok').style.display = 'block';
+    }
 })
