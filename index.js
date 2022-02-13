@@ -2,10 +2,12 @@
 function codeGenerate() {
     const code = Math.round(Math.random() * 10000);
     const codeString = code + '';
+    console.log(code);
     if (codeString.length == 4) {
         return code;
+
     } else {
-        codeGenerate();
+        return codeGenerate();
     }
 }
 
