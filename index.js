@@ -33,11 +33,11 @@ document.getElementById('calcInput').addEventListener('click', function (event) 
         calcNumber.value = calcNumber.value + number;
     }
 
-})
+});
 
 //  submit seciton 
 
-document.getElementById('submit').addEventListener('click', function(){
+function verify(){
     const generateRandomCode = document.getElementById('generate-code').value;
     const inputCodeByUser = document.getElementById('calc-code').value;
     
@@ -49,4 +49,4 @@ document.getElementById('submit').addEventListener('click', function(){
         document.getElementById('notify-ok').style.display = 'none';
         document.getElementById('notify-not-ok').style.display = 'block';
     }
-})
+};
