@@ -22,6 +22,13 @@ document.getElementById('calcInput').addEventListener('click', function (event) 
 
     // calc input code section 
     const calcNumber = document.getElementById('calc-code');
-    calcNumber.value = calcNumber.value + number;
+    
+    if(isNaN(number)){
+        if(number == "C"){
+            calcNumber.value = '';
+        }
+    }else{
+        calcNumber.value = calcNumber.value + number;
+    }
 
 })
